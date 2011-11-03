@@ -1,3 +1,9 @@
+# revision 20741
+# category Package
+# catalog-ctan /fonts/duerer
+# catalog-date 2010-12-14 12:03:20 +0100
+# catalog-license pd
+# catalog-version undef
 Name:		texlive-duerer
 Version:	20101214
 Release:	1
@@ -52,6 +58,7 @@ support is available in the duerer-latex bundle.
 %{_texmfdistdir}/fonts/tfm/public/duerer/cdss10.tfm
 %{_texmfdistdir}/fonts/tfm/public/duerer/cdtt10.tfm
 %doc %{_texmfdistdir}/doc/fonts/duerer/README
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -62,3 +69,5 @@ support is available in the duerer-latex bundle.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
