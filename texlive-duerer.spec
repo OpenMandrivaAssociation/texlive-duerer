@@ -60,3 +60,17 @@ support is available in the duerer-latex bundle.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20101214-2
++ Revision: 751106
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20101214-1
++ Revision: 718270
+- texlive-duerer
+- texlive-duerer
+- texlive-duerer
+- texlive-duerer
+
