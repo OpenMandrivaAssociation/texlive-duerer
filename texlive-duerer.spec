@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-duerer
 Version:	20101214
-Release:	5
+Release:	6
 Summary:	Computer Duerer fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/duerer
