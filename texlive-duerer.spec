@@ -1,18 +1,12 @@
-# revision 20741
-# category Package
-# catalog-ctan /fonts/duerer
-# catalog-date 2010-12-14 12:03:20 +0100
-# catalog-license pd
-# catalog-version undef
 Name:		texlive-duerer
-Version:	20190228
+Version:	20741
 Release:	1
 Summary:	Computer Duerer fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/duerer
 License:	PD
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/duerer.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/duerer.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/duerer.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/duerer.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -25,12 +19,12 @@ base shapes, the family also offers an informal shape. LaTeX
 support is available in the duerer-latex bundle.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -53,24 +47,10 @@ support is available in the duerer-latex bundle.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20101214-2
-+ Revision: 751106
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20101214-1
-+ Revision: 718270
-- texlive-duerer
-- texlive-duerer
-- texlive-duerer
-- texlive-duerer
-
