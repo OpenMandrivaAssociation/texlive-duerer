@@ -3,7 +3,7 @@ Version:	20741
 Release:	2
 Summary:	Computer Duerer fonts
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/fonts/duerer
+URL:		https://www.ctan.org/tex-archive/fonts/duerer
 License:	PD
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/duerer.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/duerer.doc.r%{version}.tar.xz
